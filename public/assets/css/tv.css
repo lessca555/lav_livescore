@@ -97,6 +97,16 @@ body{
     width: 80%;
 }
 
+.container-tv .kanan .bawah .kanan input{
+    background-color: transparent;
+    border: none;
+    text-align: center;
+    color: #fff;
+    font-size: 100px;
+    width: 100%;
+    margin-top: 15%;
+}
+
 .container-tv .kanan .bawah .kanan h1{
     font-size: 120px;
 }

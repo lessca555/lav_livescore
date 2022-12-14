@@ -41,7 +41,7 @@
 
                 <div class="bawah">
                     <div class="tim-a">
-                        <input class="form-control" type="number" name="" id="player_kiri" min="1" value="0" disabled>
+                        <input class="form-control" type="number" name="" id="player_kiri" value="0" disabled>
                     </div>
 
                     <i class="fa-solid fa-minus pt-4"></i>
@@ -60,7 +60,7 @@
         </div>
 
         <div class="kanan-2">
-            <button class="btn btn-warning btn-tantangan-kanan" data-bs-toggle="modal" data-bs-target="#tantangan_kanan">2</button>
+            <button class="btn btn-warning btn-tantangan-kanan" data-bs-toggle="modal" data-bs-target="#exampleModal" id="roundclear"><i class="fa-solid fa-share"></i></button>
             <h5>Next Round</h5>
         </div>
 

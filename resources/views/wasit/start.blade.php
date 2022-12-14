@@ -10,7 +10,7 @@
     <title>Wasit</title>
 </head>
 <body>
-    
+
     <main>
         <div class="container-home">
             <div class="one mb-2">
@@ -43,7 +43,7 @@
                     <button class="btn btn-light btn-warning"><i class="fa-solid fa-triangle-exclamation"></i></button>
                 </div>
 
-                
+
 
             </div>
 
@@ -56,7 +56,7 @@
                         <button class="btn btn-light"><h1>SCORE</h1></button>
                     </div>
                 </div>
-                
+
                 <div class="tengah">
                     <div class="lapangan">
                         <img src="assets/img/lapangan.jpg" alt="">
@@ -175,7 +175,7 @@
     </main>
 
     <script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
     <script src="assets/js/app.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
 </body>
 </html>

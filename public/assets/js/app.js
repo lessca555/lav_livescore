@@ -1,6 +1,3 @@
-const round_ov = new bootstrap.Modal('#round_over', {
-
-});
 //cock position
 let a1 = $('.1a');
 let a2 = $('.1b');
@@ -18,22 +15,22 @@ let i=1;
 let current = -1;
 
 $('.tim_a1').click(function(){
-    $(a1).prepend(ball);
+    $(ball).appendTo(a1);
     current = 1;
 });
 
 $('.tim_a2').click(function(){
-    $(a2).prepend(ball);
+    $(ball).appendTo(a2);
     current = 1;
 });
 
 $('.tim_b1').click(function(){
-    $(b1).prepend(ball);
+    $(ball).appendTo(b1);
     current = 2;
 });
 
 $('.tim_b2').click(function(){
-    $(b2).prepend(ball);
+    $(ball).appendTo(b2);
     current = 2;
 });
 
@@ -53,7 +50,18 @@ $('.play').click(function() {
     }
 
     $('#score_kiri').click(function() {
-        $('#player_kiri').val(i++);
+        // Get the current value of the input field
+        var currentValue = $('#player_kiri').val();
+
+        // Increment the value by 1
+        var newValue = parseInt(currentValue) + 1;
+
+        // Update the input field with the new value
+        $('#player_kiri').val(newValue);
+
+        // Update the value in localStorage
+        localStorage.setItem('number', newValue);
+
         swapContent('.p1a', '.p1b')
         swapContent(a1, a2)
 
@@ -64,12 +72,24 @@ $('.play').click(function() {
             swapContent(a2, b1);
         }
         console.log(current);
+
     });
 
 
 
     $('#score_kanan').click(function() {
-        $('#player_kanan').val(x++);
+        // Get the current value of the input field
+        var currentValue = $('#player_kanan').val();
+
+        // Increment the value by 1
+        var newValue = parseInt(currentValue) + 1;
+
+        // Update the input field with the new value
+        $('#player_kanan').val(newValue);
+
+        // Update the value in localStorage
+        localStorage.setItem('number1', newValue);
+
         swapContent('.p2a', '.p2b')
         swapContent(b1, b2)
 
@@ -92,13 +112,9 @@ $('.play').click(function() {
     $('#plus_cock').click(function(){
         $('#jumlah_cock').val(cocks++);
     });
+
 });
 
-let vals = 1;
-
-$('#tv_kiri').val(vals);
-
-console.log("kntl");
 
 $('#tim-b').hide();
 $('#tim-a').hide();
@@ -111,3 +127,7 @@ $('.tim-2').click(function(){
     $('#tim-b').hide();
 });
 
+$('#roundclear').click(function(){
+    localStorage.clear();
+    console.log("done");
+})

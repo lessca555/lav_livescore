@@ -54,13 +54,54 @@
                 </center>
             </div>
 
-            <div class="kanan" id="tv_kanan">
+            <div class="kanan">
                 <center>
-                    <h1></h1>
+                    <center>
+                        <input type="number" id="tv_kanan" value="0" disabled>
+                    </center>
                 </center>
             </div>
         </div>
     </div>
 </div>
+<script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
+<script>
+    // Set an interval to refresh the page every 1000 milliseconds (1 second)
+    setInterval(function() {
+        // Increment the value by 1
+        var currentValue = parseInt(localStorage.getItem('number'));
+
+        $('#tv_kiri').val(currentValue)
+        $('#tv_kiri').change(function(){
+            // Refresh the page
+            location.reload();
+        })
+
+        if(currentValue == 0){
+            localStorage.clear();
+        }
+
+
+        // Increment the value by 1
+        var kananValue = parseInt(localStorage.getItem('number1'));
+
+        $('#tv_kanan').val(kananValue)
+        $('#tv_kanan').change(function(){
+            // Refresh the page
+            location.reload();
+        })
+
+        if(kananValue == 0){
+            localStorage.clear();
+        }
+
+    }, 1000);
+
+    setInterval(function() {
+
+
+
+    }, 1000);
+</script>
 
 @endsection
