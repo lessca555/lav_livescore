@@ -162,7 +162,7 @@ $('.play').click(function() {
 
             //hapus local storage
             localStorage.clear();
-            console.log("done");
+            console.log("r1 done");
 
             //hapus cock pertama
             $('.cock img').first().remove();
@@ -183,7 +183,7 @@ $('.play').click(function() {
 
             //hapus local storage
             localStorage.clear();
-            console.log("done");
+            console.log("r2 done");
 
             //hapus cock pertama
             $('.cock img').first().remove();
