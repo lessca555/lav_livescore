@@ -2,12 +2,14 @@
 @section('title', 'play')
 @section('content')
 
+
+
 <div class="container-home">
     <div class="one mb-2">
         <div class="kiri-1">
             <div class="add_cock">
                 <img src="assets/img/cock.png" alt="">
-                <input type="number" class="form-control" name="" id="jumlah_cock" min=0 value="0" disabled>
+                <input type="number" class="form-control" name="" id="jumlah_cock" value="0" disabled>
             </div>
         </div>
 
@@ -21,33 +23,52 @@
 
                 <div class="atas">
                     <div class="kiri">
-                        <center>
-                            <h1>1 - 1</h1>
-                        </center>
+                        <div class="r1-kiri">
+                            <h1 id="r1_kiri">0</h1>
+                        </div>
+
+                        <i class="fa-solid fa-minus pt-4"></i>
+
+                        <div class="r1-kanan">
+                            <h1 id="r1_kanan">0</h1>
+                        </div>
+
                     </div>
 
                     <div class="tengah">
-                        <center>
-                            <h1>1 - 1</h1>
-                        </center>
+                        <div class="r2-kiri">
+                            <h1 id="r2_kiri">0</h1>
+                        </div>
+
+                        <i class="fa-solid fa-minus pt-4"></i>
+
+                        <div class="r2-kanan">
+                            <h1 id="r2_kanan">0</h1>
+                        </div>
                     </div>
 
                     <div class="kanan">
-                        <center>
-                            <h1>1 - 1</h1>
-                        </center>
+                        <div class="r3-kiri">
+                            <h1 id="r3_kiri">0</h1>
+                        </div>
+
+                        <i class="fa-solid fa-minus pt-4"></i>
+
+                        <div class="r3-kanan">
+                            <h1 id="r3_kanan">0</h1>
+                        </div>
                     </div>
                 </div>
 
                 <div class="bawah">
                     <div class="tim-a">
-                        <input class="form-control" type="number" name="" id="player_kiri" value="0" disabled>
+                        <input class="form-control" style="text-align: center;" type="number" name="" id="player_kiri" min="1" value="0" disabled>
                     </div>
 
                     <i class="fa-solid fa-minus pt-4"></i>
 
                     <div class="tim-b">
-                        <input class="form-control" style="text-align: right;" type="number" name="" id="player_kanan" min="1" value="0" disabled>
+                        <input class="form-control" style="text-align: center;" type="number" name="" id="player_kanan" min="1" value="0" disabled>
                     </div>
 
                 </div>
@@ -60,8 +81,27 @@
         </div>
 
         <div class="kanan-2">
-            <button class="btn btn-warning btn-tantangan-kanan" data-bs-toggle="modal" data-bs-target="#exampleModal" id="roundclear"><i class="fa-solid fa-share"></i></button>
-            <h5>Next Round</h5>
+            <div class="round1">
+                <button class="btn btn-warning btn-tantangan-kanan" data-bs-toggle="modal" data-bs-target="#exampleModal" id="roundclear">
+                    <i class="fa-solid fa-arrow-right"></i>
+                </button>
+                <h5>Next Round</h5>
+            </div>
+
+            <div class="round2">
+                <button class="btn btn-warning btn-tantangan-kanan" data-bs-toggle="modal" data-bs-target="#exampleModal" id="roundclear1">
+                    <i class="fa-solid fa-arrow-right"></i>
+                </button>
+                <h5>Next Round</h5>
+            </div>
+
+            <div class="round3">
+                <button class="btn btn-warning btn-tantangan-kanan" data-bs-toggle="modal" data-bs-target="#exampleModal" id="roundclear2">
+                    <i class="fa-solid fa-arrow-right"></i>
+                </button>
+                <h5>Finish</h5>
+
+            </div>
         </div>
 
         <!-- modals -->
@@ -258,12 +298,12 @@
                     </div>
 
                     <div class="modal-body">
-                        <button class="btn btn-dark w-100" style="text-align: left;" data-bs-toggle="modal" data-bs-target="#modal1">
+                        <button class="btn btn-dark w-100" style="text-align: left;" data-bs-toggle="modal" data-bs-target="#modal1" id="slc_team1">
                             <h1>Samsudin(MU)</h1>
                             <h1>Joko(MU)</h1>
                         </button>
 
-                        <button class="btn btn-dark mt-3 w-100" style="text-align: left;" data-bs-toggle="modal" data-bs-target="#modal1">
+                        <button class="btn btn-dark mt-3 w-100" style="text-align: left;" data-bs-toggle="modal" data-bs-target="#modal1" id="slc_team2">
                             <h1>Sugiri(SF)</h1>
                             <h1>Widodo(SF)</h1>
                         </button>
@@ -374,7 +414,7 @@
                 <button class="btn btn-light" id="minus_cock"><i class="fa-solid fa-minus"></i> <img src="assets/img/cock.png" alt=""></button>
             </div>
 
-            <div class="bawah">
+            <div class="bawah sc_kiri">
                 <button class="btn btn-light score_plus" id="score_kiri"><h1>SCORE</h1></button>
             </div>
         </div>
@@ -383,53 +423,59 @@
             <div class="lapangan">
                 <img src="assets/img/lapangan1.jpg" alt="">
 
-                <div class="player1">
-                    <div class="player1-a">
-                        <div class="pemain p1a">
-                            <h4>Samsudin</h4>
+                <div class="kiri" id="lapangan_kiri">
+                    <div class="player1">
+                        <div class="player1-a">
+                            <div class="pemain p1a">
+                                <h4>Samsudin</h4>
+                            </div>
+
+                            <div class="cock 1a">
+
+                            </div>
                         </div>
 
-                        <div class="cock 1a">
+                        <div class="player1-b">
+                            <div class="pemain p1b">
+                                <h4>Joko</h4>
+                            </div>
 
+                            <div class="cock 1b">
+
+                            </div>
                         </div>
+
                     </div>
+                </div>
 
-                    <div class="player1-b">
-                        <div class="pemain p1b">
-                            <h4>Joko</h4>
+                <div class="kanan" id="lapangan_kanan">
+                    <div class="player2">
+                        <div class="player2-a">
+
+                            <div class="cock 2a">
+
+                            </div>
+
+                            <div class="pemain p2a">
+                                <h4>Sugiri</h4>
+                            </div>
                         </div>
 
-                        <div class="cock 1b">
+                        <div class="player2-b">
+                            <div class="cock 2b">
+
+                            </div>
+
+                            <div class="pemain p2b">
+                                <h4>Widodo</h4>
+                            </div>
 
                         </div>
+
                     </div>
 
                 </div>
 
-                <div class="player2">
-                    <div class="player2-a">
-
-                        <div class="cock 2a">
-
-                        </div>
-
-                        <div class="pemain p2a">
-                            <h4>Sugiri</h4>
-                        </div>
-                    </div>
-
-                    <div class="player2-b">
-                        <div class="cock 2b">
-
-                        </div>
-
-                        <div class="pemain p2b">
-                            <h4>Widodo</h4>
-                        </div>
-
-                    </div>
-
-                </div>
             </div>
 
         </div>
@@ -438,7 +484,7 @@
             <div class="atas">
                 <button class="btn btn-light" id="plus_cock"><i class="fa-solid fa-plus"></i> <img src="assets/img/cock.png" alt=""></button>
             </div>
-            <div class="bawah">
+            <div class="bawah sc_kanan">
                 <button class="btn btn-light score_plus" id="score_kanan"><h1>SCORE</h1></button>
             </div>
         </div>

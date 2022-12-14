@@ -1,12 +1,12 @@
 body{
-    margin: 0;
     padding: 0;
-    background-color: #a2590c;
+    margin: 0;
 }
 
 .container-home{
     background-color: #a2590c;
     /* background-color: #fff; */
+    height: 100vh;
 }
 
 .container-home .one{
@@ -83,16 +83,22 @@ body{
 }
 
 .container-home .one .tengah .score .atas .kiri{
+    display: flex;
+    justify-content: space-around;
     width: 33%;
     border-right: 2px solid #000;
 }
 
 .container-home .one .tengah .score .atas .tengah{
+    display: flex;
+    justify-content: space-around;
     width: 33%;
     border-right: 2px solid #000;
 }
 
 .container-home .one .tengah .score .atas .kanan{
+    display: flex;
+    justify-content: space-around;
     width: 33%;
 }
 

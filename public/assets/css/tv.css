@@ -1,13 +1,8 @@
-body{
-    margin: 0;
-    padding: 0;
-    background-color: #000;
-}
-
 .container-tv{
     background-color: #000;
     color: #fff;
     display: flex;
+    height: 100vh;
 }
 
 .container-tv .kiri{
