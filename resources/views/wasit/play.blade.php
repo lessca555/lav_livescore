@@ -17,132 +17,138 @@
             <button class="btn btn-primary btn-back"><i class="fa-solid fa-reply"></i></button>
         </div>
 
-        <div class="tengah">
-            <button class="btn btn-dark btn-play" id="play" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="fa-solid fa-circle-play"></i></button>
-            <div class="score">
+            <div class="tengah">
+                <button class="btn btn-dark btn-play" id="play" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="fa-solid fa-circle-play"></i></button>
 
-                <div class="atas">
-                    <div class="kiri">
-                        <div class="r1-kiri">
-                            <h1 id="r1_kiri">0</h1>
+                <form class="score">
+                    @csrf
+                    <div>
+
+                        <div class="atas">
+                            <div class="kiri">
+                                <div class="r1-kiri">
+                                    <h1 id="r1_kiri">0</h1>
+                                </div>
+
+                                <i class="fa-solid fa-minus pt-4"></i>
+
+                                <div class="r1-kanan">
+                                    <h1 id="r1_kanan">0</h1>
+                                </div>
+
+                            </div>
+
+                            <div class="tengah">
+                                <div class="r2-kiri">
+                                    <h1 id="r2_kiri">0</h1>
+                                </div>
+
+                                <i class="fa-solid fa-minus pt-4"></i>
+
+                                <div class="r2-kanan">
+                                    <h1 id="r2_kanan">0</h1>
+                                </div>
+                            </div>
+
+                            <div class="kanan">
+                                <div class="r3-kiri">
+                                    <h1 id="r3_kiri">0</h1>
+                                </div>
+
+                                <i class="fa-solid fa-minus pt-4"></i>
+
+                                <div class="r3-kanan">
+                                    <h1 id="r3_kanan">0</h1>
+                                </div>
+                            </div>
                         </div>
 
-                        <i class="fa-solid fa-minus pt-4"></i>
+                        <div class="bawah">
+                            <div class="tim-a">
+                                <input class="form-control" style="text-align: center;" type="number" name="kiri" id="player_kiri" min="1" value="0" disabled>
+                            </div>
 
-                        <div class="r1-kanan">
-                            <h1 id="r1_kanan">0</h1>
+                            <i class="fa-solid fa-minus pt-4"></i>
+
+                            <div class="tim-b">
+                                <input class="form-control" style="text-align: center;" type="number" name="kanan" id="player_kanan" min="1" value="0" disabled>
+                            </div>
+
                         </div>
 
                     </div>
-
-                    <div class="tengah">
-                        <div class="r2-kiri">
-                            <h1 id="r2_kiri">0</h1>
-                        </div>
-
-                        <i class="fa-solid fa-minus pt-4"></i>
-
-                        <div class="r2-kanan">
-                            <h1 id="r2_kanan">0</h1>
-                        </div>
-                    </div>
-
-                    <div class="kanan">
-                        <div class="r3-kiri">
-                            <h1 id="r3_kiri">0</h1>
-                        </div>
-
-                        <i class="fa-solid fa-minus pt-4"></i>
-
-                        <div class="r3-kanan">
-                            <h1 id="r3_kanan">0</h1>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="bawah">
-                    <div class="tim-a">
-                        <input class="form-control" style="text-align: center;" type="number" name="" id="player_kiri" min="1" value="0" disabled>
-                    </div>
-
-                    <i class="fa-solid fa-minus pt-4"></i>
-
-                    <div class="tim-b">
-                        <input class="form-control" style="text-align: center;" type="number" name="" id="player_kanan" min="1" value="0" disabled>
-                    </div>
-
-                </div>
-
-            </div>
-        </div>
-
-        <div class="kanan-1">
-            <button class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#pelanggaran"><i class="fa-solid fa-triangle-exclamation"></i></button>
-        </div>
-
-        <div class="kanan-2">
-            <div class="round1">
-                <button class="btn btn-warning btn-tantangan-kanan" data-bs-toggle="modal" data-bs-target="#exampleModal" id="roundclear">
-                    <i class="fa-solid fa-arrow-right"></i>
-                </button>
-                <h5>Next Round</h5>
+                </form>
             </div>
 
-            <div class="round2">
-                <button class="btn btn-warning btn-tantangan-kanan" data-bs-toggle="modal" data-bs-target="#exampleModal" id="roundclear1">
-                    <i class="fa-solid fa-arrow-right"></i>
-                </button>
-                <h5>Next Round</h5>
+            <div class="kanan-1">
+                <button class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#pelanggaran"><i class="fa-solid fa-triangle-exclamation"></i></button>
             </div>
 
-            <div class="round3">
-                <button class="btn btn-warning btn-tantangan-kanan" data-bs-toggle="modal" data-bs-target="#exampleModal" id="roundclear2">
-                    <i class="fa-solid fa-arrow-right"></i>
-                </button>
-                <h5>Finish</h5>
+            <div class="kanan-2">
+                <form>
+                    @csrf
+                    <div class="round1">
+                        <button class="btn btn-warning btn-tantangan-kanan" data-bs-toggle="modal" data-bs-target="#r1_finish" id="roundclear" name="button" value="1">
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </button>
+                        <h5>Next Round</h5>
+                    </div>
 
+                    <div class="round2">
+                        <button class="btn btn-warning btn-tantangan-kanan" data-bs-toggle="modal" data-bs-target="#r2_finish" id="roundclear1" name="button" value="2">
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </button>
+                        <h5>Next Round</h5>
+                    </div>
+
+                    <div class="round3">
+                        <button class="btn btn-warning btn-tantangan-kanan" data-bs-toggle="modal" data-bs-target="#finish" id="finished" name="button" value="3">
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </button>
+                        <h5>Finish</h5>
+
+                    </div>
+                </form>
             </div>
-        </div>
 
         <!-- modals -->
 
-        <!-- Modal tantangan kiri-->
-        <div class="modal fade" id="tantangan_kiri" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <!-- Modal round 1-->
+        <div class="modal fade pt-5" id="r1_finish" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
-                    <div class="modal-header">
-                        <h1 class="modal-title fs-5" id="exampleModalLabel">Tantangan Samsudin/Joko</h1>
-                    </div>
 
                     <div class="modal-body">
-                        <button class="btn btn-success w-100" style="font-size: 30px">Sukses</button>
-                        <button class="btn btn-danger w-100 mt-2" style="font-size: 30px">Gagal</button>
-                        <button class="btn btn-primary w-100 mt-2" style="font-size: 30px">Tidak ada keputusan</button>
+                        <p>Round 1 Selesai</p>
+                        <button class="btn btn-primary w-100" style="font-size: 30px" data-bs-dismiss="modal">Ok</button>
                     </div>
 
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" style="font-size: 20px;">Close</button>
-                    </div>
                 </div>
             </div>
         </div>
 
-        <!-- Modal tantangan kanan-->
-        <div class="modal fade" id="tantangan_kanan" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <!-- Modal round 2-->
+        <div class="modal fade pt-5" id="r2_finish" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
-                    <div class="modal-header">
-                        <h1 class="modal-title fs-5" id="exampleModalLabel">Tantangan Sugiri/Widodo</h1>
-                    </div>
 
                     <div class="modal-body">
-                        <button class="btn btn-success w-100" style="font-size: 30px">Sukses</button>
-                        <button class="btn btn-danger w-100 mt-2" style="font-size: 30px">Gagal</button>
-                        <button class="btn btn-primary w-100 mt-2" style="font-size: 30px">Tidak ada keputusan</button>
+                        <p>Round 2 Selesai</p>
+                        <button class="btn btn-primary w-100" style="font-size: 30px" data-bs-dismiss="modal">Ok</button>
                     </div>
 
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" style="font-size: 20px;">Close</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal finish-->
+        <div class="modal fade pt-5" id="finish" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+
+                    <div class="modal-body">
+                        <p>Pertandingan Selesai</p>
+                        <button class="btn btn-primary w-100" style="font-size: 30px" data-bs-dismiss="modal">Ok</button>
                     </div>
 
                 </div>
@@ -303,7 +309,7 @@
                             <h1>Joko(MU)</h1>
                         </button>
 
-                        <button class="btn btn-dark mt-3 w-100" style="text-align: left;" data-bs-toggle="modal" data-bs-target="#modal1" id="slc_team2">
+                        <button class="btn btn-dark mt-3 w-100" style="text-align: left;" data-bs-toggle="modal" data-bs-target="#modal1" id="slc_team2" >
                             <h1>Sugiri(SF)</h1>
                             <h1>Widodo(SF)</h1>
                         </button>
@@ -359,21 +365,21 @@
                     </div>
                     <div class="modal-body">
                         <div id="tim-a">
-                            <button class="btn btn-dark w-100 play" data-bs-dismiss="modal">
+                            <button class="btn btn-dark w-100 play" data-bs-dismiss="modal" onclick="round1()">
                                 <h1>Samsudin(MU)</h1>
                             </button>
 
-                            <button class="btn btn-dark w-100 mt-3 play" data-bs-dismiss="modal">
+                            <button class="btn btn-dark w-100 mt-3 play" data-bs-dismiss="modal" onclick="round1()">
                                 <h1>Joko(MU)</h1>
                             </button>
                         </div>
 
                         <div id="tim-b">
-                            <button class="btn btn-dark w-100 mt-3 play" data-bs-dismiss="modal">
+                            <button class="btn btn-dark w-100 mt-3 play" data-bs-dismiss="modal" onclick="round1()">
                                 <h1>Sugiri(SF)</h1>
                             </button>
 
-                            <button class="btn btn-dark w-100 mt-3 play" data-bs-dismiss="modal">
+                            <button class="btn btn-dark w-100 mt-3 play" data-bs-dismiss="modal" onclick="round1()">
                                 <h1>Widodo(SF)</h1>
                             </button>
                         </div>
@@ -427,7 +433,7 @@
                     <div class="player1">
                         <div class="player1-a">
                             <div class="pemain p1a">
-                                <h4>Samsudin</h4>
+                                <h4></h4>
                             </div>
 
                             <div class="cock 1a">
@@ -437,7 +443,7 @@
 
                         <div class="player1-b">
                             <div class="pemain p1b">
-                                <h4>Joko</h4>
+                                <h4></h4>
                             </div>
 
                             <div class="cock 1b">
@@ -457,7 +463,7 @@
                             </div>
 
                             <div class="pemain p2a">
-                                <h4>Sugiri</h4>
+                                <h4></h4>
                             </div>
                         </div>
 
@@ -467,7 +473,7 @@
                             </div>
 
                             <div class="pemain p2b">
-                                <h4>Widodo</h4>
+                                <h4></h4>
                             </div>
 
                         </div>
@@ -484,9 +490,11 @@
             <div class="atas">
                 <button class="btn btn-light" id="plus_cock"><i class="fa-solid fa-plus"></i> <img src="assets/img/cock.png" alt=""></button>
             </div>
+
             <div class="bawah sc_kanan">
                 <button class="btn btn-light score_plus" id="score_kanan"><h1>SCORE</h1></button>
             </div>
+
         </div>
 
     </div>
